@@ -1,0 +1,26 @@
+.styled-scrollbars{
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    --shreddit-content-background: var(--color-neutral-background);
+    --styled-scrollbar-background: var(--color-neutral-background);
+    --scrollbar-background: var(--styled-scrollbar-background, var(--shreddit-content-background))
+}
+
+.styled-scrollbars:hover {
+    scrollbar-color: var(--color-neutral-border) transparent;
+}
+
+.styled-scrollbars::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+.styled-scrollbars::-webkit-scrollbar-track {
+    background: var(--scrollbar-background);
+}
+
+.h-screen-without-header{
+    --dvh-unit: 1dvh;
+    --viewport-height: calc(calc(var(--dvh-unit)* 100));
+    height: calc(var(--viewport-height, 100vh) - 56px - 1px);
+}
